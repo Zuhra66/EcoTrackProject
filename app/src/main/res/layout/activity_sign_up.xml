@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUP">
+
+    <TextView
+        android:id="@+id/Please_Sign_Up_here_textView"
+        android:layout_width="269dp"
+        android:layout_height="67dp"
+        android:text="@string/please_sign_up_here"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="@+id/Please_Sign_Up_here_textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="NotSibling" />
+
+    <EditText
+        android:id="@+id/Enter_Username"
+        android:layout_width="269dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:inputType="textUri"
+        android:text="@string/enter_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Please_Sign_Up_here_textView"
+        android:autofillHints="username"
+        tools:ignore="LabelFor"
+        />
+
+    <EditText
+        android:id="@+id/Enter_Password"
+        android:layout_width="269dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:text="@string/enter_password"
+        android:hint="@string/enter_password1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_Username"
+        tools:ignore="LabelFor"
+        android:autofillHints=""
+/>
+
+    <EditText
+        android:id="@+id/confirm_button"
+        android:layout_width="269dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:text="@string/enter_password"
+        android:hint="@string/confirm_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_Password"
+        tools:ignore="LabelFor"
+        android:autofillHints=""
+         />
+
+    <Button
+        android:id="@+id/Sign_Up"
+        android:layout_width="269dp"
+        android:layout_height="67dp"
+        android:gravity="center"
+        android:text="@string/sign_up"
+        android:textSize="24sp"
+        android:autofillHints="Sing Up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_button"
+
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>

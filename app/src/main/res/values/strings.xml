@@ -8,4 +8,14 @@
     <string name="sign_up">Sign Up</string>
     <string name="Please_Sign_In" />
     <string name="please_Sign_in">Please Sign In</string>
+    <string name="please_sign_up_here">Please Sign Up here</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="enter_password1">enter password</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Welcome_Admin">Welcome Admin</string>
+    <string name="User_management">User management</string>
+    <string name="Content_management">Content management</string>
+    <string name="community_engagement">Community engagement</string>
+    <string name="Carbon_Footprint_Tracking">Carbon Footprint Tracking</string>
+    <string name="Sustainable_Lifestyle_Tips">Sustainable Lifestyle Tips</string>
 </resources>
