@@ -21,7 +21,7 @@
         tools:layout_editor_absoluteY="152dp" />
 
     <EditText
-        android:id="@+id/Enter_Username"
+        android:id="@+id/Enter_Username_Input_EditText"
         android:layout_width="269dp"
         android:layout_height="67dp"
         android:gravity="center"
@@ -35,17 +35,17 @@
         tools:ignore="LabelFor" />
 
     <EditText
-        android:id="@+id/Enter_Password"
+        android:id="@+id/Enter_Password_Input_EditText"
         android:layout_width="269dp"
         android:layout_height="67dp"
         android:gravity="center"
         android:inputType="textPassword"
         android:textSize="24sp"
         android:text="@string/enter_password"
-        android:hint="@string/enter_password"
+        android:hint="@string/Enter_password2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Enter_Username"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_Username_Input_EditText"
         tools:ignore="LabelFor"
         android:autofillHints="" />
 
@@ -59,7 +59,7 @@
         android:autofillHints="Sing In"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Enter_Password"
+        app:layout_constraintTop_toBottomOf="@+id/Enter_Password_Input_EditText"
          />
 
     <TextView
