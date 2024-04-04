@@ -1935,7 +1935,14 @@
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
+    <string name="Carbon_Footprint_Tracking">Carbon Footprint Tracking</string>
+    <string name="Content_management">Content management</string>
+    <string name="Enter_password2">Enter password</string>
     <string name="Please_Sign_In"/>
+    <string name="Sustainable_Lifestyle_Tips">Sustainable Lifestyle Tips</string>
+    <string name="User_management">User management</string>
+    <string name="Welcome">Welcome</string>
+    <string name="Welcome_Admin">Welcome Admin</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -1976,7 +1983,11 @@
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="community_engagement">Community engagement</string>
+    <string name="confirm_password">confirm password</string>
     <string name="enter_password"/>
+    <string name="enter_password1">enter password</string>
+    <string name="enter_password2">enter password</string>
     <string name="enter_username">Enter username</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
@@ -2102,6 +2113,7 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="please_Sign_in">Please Sign In</string>
     <string name="please_in">Please In</string>
+    <string name="please_sign_up_here">Please Sign Up here</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior

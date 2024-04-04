@@ -1,6 +1,8 @@
 package com.example.ecotrack;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -12,35 +14,36 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.room.Room;
 
+import com.example.ecotrack.databinding.ActivityMainBinding;
+
 import Database.AppDatabase;
 import Database.EcoTrackDao;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView MainDisplay;
-    EditText Username;
-    EditText Password;
-    Button SignIn;
-    TextView New_User;
-    Button SignUp;
-    EcoTrackDao EcoTrackDao;
+    ActivityMainBinding binding;
+    private static final String TAG = "malpractice";
+    String Username = "";
+    int Password = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        MainDisplay = findViewById(R.id.Please_Sign_In);
-        Username = findViewById(R.id.Enter_Username);
-        Password = findViewById(R.id.Enter_Password);
-        SignIn = findViewById(R.id.Sign_In);
-        New_User = findViewById(R.id.New_user_message);
-        SignUp = findViewById(R.id.Sign_Up);
-
-        Database.EcoTrackDao = Room.databaseBuilder(this, AppDatabase.class, AppDatabase.dbName)
-                .allowMainThreadQueries()
-                .build()
-                .EcoTrackDao;
-
-
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        binding.SignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getInformationFromDisplay();
+            }
+        });
+    }
+    private void getInformationFromDisplay(){
+        Username = binding.EnterUsernameInputEditText.getText().toString();
+        try {
+            Password = Integer.parseInt(binding.EnterPasswordInputEditText.getText().toString());
+        }catch (NumberFormatException e){
+            Log.d(TAG, "Wrong Password.");
+        }
     }
 }
