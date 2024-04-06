@@ -13,6 +13,7 @@
     <string name="app_name">EcoTrack</string>
     <string name="community_engagement">Community engagement</string>
     <string name="confirm_password">confirm password</string>
+    <string name="enter_emailAddress">enter email Address</string>
     <string name="enter_password"/>
     <string name="enter_password1">enter password</string>
     <string name="enter_password2">enter password</string>

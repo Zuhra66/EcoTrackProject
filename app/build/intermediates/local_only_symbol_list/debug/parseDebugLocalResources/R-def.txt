@@ -19,6 +19,7 @@ id User_management_textView2
 id community_engagement_textView
 id confirm_button
 id content_management_textView
+id editTextTextEmailAddress
 id main
 id welcome_admin_textView2
 id welcome_user_textView
@@ -39,6 +40,7 @@ string Welcome_Admin
 string app_name
 string community_engagement
 string confirm_password
+string enter_emailAddress
 string enter_password
 string enter_password1
 string enter_password2

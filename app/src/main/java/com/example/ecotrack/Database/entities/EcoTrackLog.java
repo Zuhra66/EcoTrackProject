@@ -1,16 +1,29 @@
-package com.example.ecotrack.Database.entities;
+package com.example.ecotrack.database.entities;
+
+import android.os.Build;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.example.ecotrack.database.EcoTrackDatabase;
+
+import java.time.LocalDateTime;
 import java.util.Objects;
 
-@Entity(tableName = "eco_track_logs")
+@Entity(tableName = EcoTrackDatabase.ECOTRACK_LOG_TABLE)
 public class EcoTrackLog {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String Username;
     private int Password;
+    private LocalDateTime date;
+    public EcoTrackLog() {
+    }
+    public EcoTrackLog(String username, int password) {
+        this.Username = username;
+        this.Password = password;
+
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -25,9 +38,13 @@ public class EcoTrackLog {
         return Objects.hash(id, Username, Password);
     }
 
-    public EcoTrackLog(String username, int password) {
-        Username = username;
-        Password = password;
+
+    public LocalDateTime getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 
     public int getId() {

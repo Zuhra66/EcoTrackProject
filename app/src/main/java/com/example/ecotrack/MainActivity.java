@@ -1,28 +1,25 @@
 package com.example.ecotrack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import androidx.room.Room;
 
+import com.example.ecotrack.database.EcoTrackLogRepository;
+import com.example.ecotrack.database.entities.EcoTrackLog;
 import com.example.ecotrack.databinding.ActivityMainBinding;
 
-import Database.AppDatabase;
-import Database.EcoTrackDao;
+import java.time.Instant;
 
 public class MainActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
-    private static final String TAG = "malpractice";
+    private ActivityMainBinding binding;
+    private EcoTrackLogRepository repository;
+    private Button SignUpButton;
+    public static final String TAG = "malpractice";
     String Username = "";
     int Password = 0;
 
@@ -30,19 +27,37 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
+
+        SignUpButton = findViewById(R.id.Sign_Up);
+        repository = new EcoTrackLogRepository(getApplication());
+
+        binding.SignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
         binding.SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 getInformationFromDisplay();
+                insertEcoTrackLogRecord();
             }
         });
     }
-    private void getInformationFromDisplay(){
+
+    private void insertEcoTrackLogRecord() {
+        EcoTrackLog log = new EcoTrackLog(Username, Password);
+        repository.insertEcoTrackLog(log);
+    }
+
+    private void getInformationFromDisplay() {
         Username = binding.EnterUsernameInputEditText.getText().toString();
         try {
             Password = Integer.parseInt(binding.EnterPasswordInputEditText.getText().toString());
-        }catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             Log.d(TAG, "Wrong Password.");
         }
     }
