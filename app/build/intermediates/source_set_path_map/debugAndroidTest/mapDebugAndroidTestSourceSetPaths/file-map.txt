@@ -1,0 +1,6 @@
+com.example.ecotrack.test.app-annotation-experimental-1.3.0-0 /Users/zuhra/.gradle/caches/transforms-3/24ac0ee46a5694017e699d8ba23c250c/transformed/annotation-experimental-1.3.0/res
+com.example.ecotrack.test.app-core-1.5.0-1 /Users/zuhra/.gradle/caches/transforms-3/4d65836d49da1ec6b73f1d89503b2890/transformed/core-1.5.0/res
+com.example.ecotrack.test.app-androidTest-2 /Users/zuhra/AndroidStudioProjects/EcoTrack3/app/build/generated/res/resValues/androidTest/debug
+com.example.ecotrack.test.app-mergeDebugAndroidTestResources-3 /Users/zuhra/AndroidStudioProjects/EcoTrack3/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/merged.dir
+com.example.ecotrack.test.app-mergeDebugAndroidTestResources-4 /Users/zuhra/AndroidStudioProjects/EcoTrack3/app/build/intermediates/incremental/debugAndroidTest/mergeDebugAndroidTestResources/stripped.dir
+com.example.ecotrack.test.app-debugAndroidTest-5 /Users/zuhra/AndroidStudioProjects/EcoTrack3/app/build/intermediates/merged_res/debugAndroidTest/mergeDebugAndroidTestResources

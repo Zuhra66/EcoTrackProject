@@ -56,8 +56,8 @@
 35-->/Users/zuhra/AndroidStudioProjects/EcoTrack3/app/src/main/AndroidManifest.xml:20:13-37
 36        <activity
 36-->/Users/zuhra/AndroidStudioProjects/EcoTrack3/app/src/main/AndroidManifest.xml:21:9-23:40
-37            android:name="com.example.ecotrack.SignUP"
-37-->/Users/zuhra/AndroidStudioProjects/EcoTrack3/app/src/main/AndroidManifest.xml:22:13-35
+37            android:name="com.example.ecotrack.SignUpActivity"
+37-->/Users/zuhra/AndroidStudioProjects/EcoTrack3/app/src/main/AndroidManifest.xml:22:13-43
 38            android:exported="false" />
 38-->/Users/zuhra/AndroidStudioProjects/EcoTrack3/app/src/main/AndroidManifest.xml:23:13-37
 39        <activity

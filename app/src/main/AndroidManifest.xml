@@ -19,7 +19,7 @@
             android:name=".ActivityWelcomeAdmin"
             android:exported="false" />
         <activity
-            android:name=".SignUP"
+            android:name=".SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

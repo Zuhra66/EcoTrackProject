@@ -27,11 +27,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(R.layout.activity_main);
-
-        SignUpButton = findViewById(R.id.Sign_Up);
-        repository = new EcoTrackLogRepository(getApplication());
-
+        setContentView(binding.getRoot());
         binding.SignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        repository = new EcoTrackLogRepository(getApplication());
         binding.SignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

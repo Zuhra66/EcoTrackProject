@@ -34,7 +34,7 @@
             android:name="com.example.ecotrack.ActivityWelcomeAdmin"
             android:exported="false" />
         <activity
-            android:name="com.example.ecotrack.SignUP"
+            android:name="com.example.ecotrack.SignUpActivity"
             android:exported="false" />
         <activity
             android:name="com.example.ecotrack.MainActivity"
