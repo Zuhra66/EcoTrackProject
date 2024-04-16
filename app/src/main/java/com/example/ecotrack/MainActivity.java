@@ -23,19 +23,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         //Bind the username, password, and sign in button to display
-        username = findViewById(R.id.loginIDEditText);
-        password = findViewById(R.id.passwordEditText);
-        signInButton = findViewById(R.id.signInButton);
+        username = binding.loginIDEditText;
+        password = binding.passwordEditText;
+        signInButton = binding.signInButton;
 
-        signInButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (username.getText().toString().equals("user")
-                        && password.getText().toString().equals("1234")){
-                    Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                } else {
-                    Toast.makeText(MainActivity.this, "Unable to Login", Toast.LENGTH_SHORT).show();
-                }
+        //Checks for sign in info correct
+        signInButton.setOnClickListener(v -> {
+            if (username.getText().toString().equals("user")
+                    && password.getText().toString().equals("1234")){
+                Toast.makeText(MainActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(MainActivity.this, "Unable to Login", Toast.LENGTH_SHORT).show();
             }
         });
 
