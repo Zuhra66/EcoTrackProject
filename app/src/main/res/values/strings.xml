@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">EcoTrack</string>
+    <string name="ecotrack">EcoTrack</string>
+    <string name="login_n_npassword">Login:\n \nPassword:</string>
+    <string name="enter_loginid">Enter LoginID</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="forgot_id_password">Forgot ID/Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="please_sign_in">Please Sign In</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="username_n_npassword_n_nretype_password">Username:\n\nPassword:\n\nRetype Password:</string>
+    <string name="Username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="Retype_password">Retype Password:</string>
+    <string name="enter_username">Enter Username</string>
+    <string name="welcome">Welcome</string>
+    <string name="carbon_footprint_tracking">Carbon Footprint Tracking</string>
+    <string name="sustainable_lifestyle_tips">Sustainable Lifestyle Tips</string>
+    <string name="community_engagement">Community Engagement</string>
+    <string name="logout">Logout</string>
 </resources>
