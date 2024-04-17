@@ -1,5 +1,6 @@
 package com.example.ecotrack;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -31,6 +32,13 @@ public class EcoTrackDashboard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(EcoTrackDashboard.this, "It works!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        binding.logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EcoTrackDashboard.this, MainActivity.class));
             }
         });
 
