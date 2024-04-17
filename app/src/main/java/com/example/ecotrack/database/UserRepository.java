@@ -1,9 +1,9 @@
-package com.example.ecotrack.Database;
+package com.example.ecotrack.database;
 
 import android.app.Application;
 import android.util.Log;
 
-import com.example.ecotrack.Database.entities.User;
+import com.example.ecotrack.database.entities.User;
 import com.example.ecotrack.MainActivity;
 
 import java.util.ArrayList;
@@ -19,7 +19,7 @@ public class UserRepository {
     public UserRepository(Application application){
         UserDatabase db = UserDatabase.getDatabase(application);
         this.userDAO = db.userDAO();
-        this.allUsers = this.userDAO.getAllRecords();
+        this.allUsers = (ArrayList<User>) this.userDAO.getAllRecords();
     }
 
     public ArrayList<User> getAllUsers() {
@@ -27,7 +27,7 @@ public class UserRepository {
                 new Callable<ArrayList<User>>() {
                     @Override
                     public ArrayList<User> call() throws Exception {
-                        return userDAO.getAllRecords();
+                        return (ArrayList<User>) userDAO.getAllRecords();
                     }
                 }
         );

@@ -1,4 +1,4 @@
-package com.example.ecotrack.Database;
+package com.example.ecotrack.database;
 
 import android.content.Context;
 import android.util.Log;
@@ -9,7 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.example.ecotrack.Database.entities.User;
+import com.example.ecotrack.database.entities.User;
 import com.example.ecotrack.MainActivity;
 
 import java.util.concurrent.ExecutorService;

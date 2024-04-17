@@ -1,9 +1,9 @@
-package com.example.ecotrack.Database.entities;
+package com.example.ecotrack.database.entities;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import com.example.ecotrack.Database.UserDatabase;
+import com.example.ecotrack.database.UserDatabase;
 import java.util.Objects;
 
 @Entity (tableName = UserDatabase.USER_TABLE)
