@@ -9,4 +9,12 @@
     <string name="sign_up">Sign Up</string>
     <string name="please_sign_in">Please Sign In</string>
     <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="username_n_npassword_n_nretype_password">Username:\n\nPassword:\n\nRetype Password:</string>
+    <string name="Username">Username:</string>
+    <string name="password">Password:</string>
+    <string name="retype_password">Retype Password</string>
+    <string name="Retype_password">Retype Password:</string>
+    <string name="enter_username">Enter Username</string>
 </resources>
