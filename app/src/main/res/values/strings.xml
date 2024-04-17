@@ -17,4 +17,9 @@
     <string name="retype_password">Retype Password</string>
     <string name="Retype_password">Retype Password:</string>
     <string name="enter_username">Enter Username</string>
+    <string name="welcome">Welcome</string>
+    <string name="carbon_footprint_tracking">Carbon Footprint Tracking</string>
+    <string name="sustainable_lifestyle_tips">Sustainable Lifestyle Tips</string>
+    <string name="community_engagement">Community Engagement</string>
+    <string name="logout">Logout</string>
 </resources>

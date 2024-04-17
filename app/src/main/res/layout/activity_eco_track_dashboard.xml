@@ -9,9 +9,67 @@
     tools:context=".EcoTrackDashboard">
 
     <TextView
+        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/welcome"
         android:textColor="@color/white"
-        android:text="Welcome "
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/carbonFootprintButton"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textSize="23sp"
+        android:text="@string/carbon_footprint_tracking"
+        android:backgroundTint="@color/darkGreen"
+        app:layout_constraintTop_toBottomOf="@id/welcomeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/lifestyleTipsButton"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="23sp"
+        android:text="@string/sustainable_lifestyle_tips"
+        android:backgroundTint="@color/darkGreen"
+        app:layout_constraintTop_toBottomOf="@id/carbonFootprintButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/communityEngagementButton"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="23sp"
+        android:text="@string/community_engagement"
+        android:backgroundTint="@color/darkGreen"
+        app:layout_constraintTop_toBottomOf="@id/lifestyleTipsButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:textSize="23sp"
+        android:text="@string/logout"
+        android:backgroundTint="@color/darkGreen"
+        app:layout_constraintTop_toBottomOf="@id/communityEngagementButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -60,13 +60,22 @@ public class SignUpActivity extends AppCompatActivity {
             //isAllowed checks that username is not already in use
             if (isAllowed){
 
-                //Checks for passwords to match and creates Account
-                //Keeps waiting until passwords match
-                if (password.equals(retypePassword)){
-                    userDAO.insertUser(new User(username, password));
-                    startActivity(new Intent(SignUpActivity.this, MainActivity.class));
-                } else {
-                    Toast.makeText(SignUpActivity.this, "Password do not match! Please try again.", Toast.LENGTH_SHORT).show();
+                //Checks for password to be at least 8 characters long and for at least one special character
+                if(password.length() >=8 && password.matches(".*[!@#$%^&*(),.?\":{}|<>].*")) {
+                    //Checks for passwords to match and creates Account
+                    //Keeps waiting until passwords match
+                    if (password.equals(retypePassword)) {
+                        userDAO.insertUser(new User(username, password));
+                        startActivity(new Intent(SignUpActivity.this, MainActivity.class));
+                    } else {
+                        Toast.makeText(SignUpActivity.this, "Password do not match! Please try again.", Toast.LENGTH_SHORT).show();
+                    }
+                } else{
+                    if (password.length() < 8) {
+                        Toast.makeText(this, "Password is not at least 8 characters long.", Toast.LENGTH_SHORT).show();
+                    } else{
+                        Toast.makeText(this, "Missing special character(i.e. !, @, #, etc.)", Toast.LENGTH_SHORT).show();
+                    }
                 }
 
             } else {

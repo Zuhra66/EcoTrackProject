@@ -11,7 +11,7 @@ import java.util.List;
 
 @Dao
 public interface UserDAO {
-    @Insert
+    @Insert 
     void insertUser(User user);
 
     @Query("SELECT EXISTS (SELECT * from User where username=:username)")
@@ -20,8 +20,6 @@ public interface UserDAO {
     @Query("SELECT EXISTS (SELECT * from User where username=:username " +
             "AND password=:password)")
     boolean login(String username, String password);
- /*   @Query("SELECT * FROM " + UserDatabase.USER_TABLE)
-    List<User> getAllUsers();*/
 
     @Query("Select * from  User")
     List<User> getAllRecords();

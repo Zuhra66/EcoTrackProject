@@ -1,26 +1,38 @@
 package com.example.ecotrack;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.room.Room;
 
-import com.example.ecotrack.R;
+import com.example.ecotrack.database.UserDAO;
+import com.example.ecotrack.database.UserDatabase;
+import com.example.ecotrack.databinding.ActivityEcoTrackDashboardBinding;
+import com.example.ecotrack.database.entities.User;
 
 public class EcoTrackDashboard extends AppCompatActivity {
-
+    private ActivityEcoTrackDashboardBinding binding;
+    UserDAO userDAO;
+    UserDatabase myDB;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_eco_track_dashboard);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        binding = ActivityEcoTrackDashboardBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        myDB = Room.databaseBuilder(this, UserDatabase.class, "user")
+                .allowMainThreadQueries().fallbackToDestructiveMigration().build();
+
+        userDAO = myDB.userDAO();
+
+        binding.carbonFootprintButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(EcoTrackDashboard.this, "It works!", Toast.LENGTH_SHORT).show();
+            }
         });
+
     }
 }

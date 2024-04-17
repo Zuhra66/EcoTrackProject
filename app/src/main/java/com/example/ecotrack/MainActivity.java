@@ -35,19 +35,21 @@ public class MainActivity extends AppCompatActivity {
                 .allowMainThreadQueries().fallbackToDestructiveMigration().build();
         userDAO = myDB.userDAO();
 
-        //repository = new UserRepository(getApplication());
+        //Have not implemented repository
+        //TODO: repository = new UserRepository(getApplication());
 
+        //Enabling user to Login if account information matches
         binding.signInButton.setOnClickListener(v -> {
             getInformationFromDisplay();
-
             //checks in database for the account that matches
             if (userDAO.login(username, password)){
-                userDAO.insertUser(new User(username, password));
+                startActivity(new Intent(MainActivity.this, EcoTrackDashboard.class));
             } else {
                 Toast.makeText(MainActivity.this, "Invalid Username or Password", Toast.LENGTH_SHORT).show();
             }
         });
 
+        //Enables user to register for new account
        binding.signUpButton.setOnClickListener(v -> {
            startActivity(new Intent(MainActivity.this, SignUpActivity.class));
        });
