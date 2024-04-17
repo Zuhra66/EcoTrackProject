@@ -6,11 +6,10 @@ import androidx.room.PrimaryKey;
 import com.example.ecotrack.database.UserDatabase;
 import java.util.Objects;
 
-@Entity (tableName = UserDatabase.USER_TABLE)
+@Entity (tableName = "user")
 public class User {
     @PrimaryKey(autoGenerate = true)
     private int id;
-
     private String username;
     private String password;
     private Boolean isAdmin;

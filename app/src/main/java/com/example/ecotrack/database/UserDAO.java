@@ -6,15 +6,23 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import com.example.ecotrack.database.entities.User;
+
 import java.util.List;
 
 @Dao
 public interface UserDAO {
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(User user);
-    @Query("SELECT * FROM " + UserDatabase.USER_TABLE)
-    List<User> getAllUsers();
+    @Insert
+    void insertUser(User user);
 
-    @Query("Select * from " + UserDatabase.USER_TABLE)
+    @Query("SELECT EXISTS (SELECT * from User where username=:username)")
+    boolean is_taken(String username);
+
+    @Query("SELECT EXISTS (SELECT * from User where username=:username " +
+            "AND password=:password)")
+    boolean login(String username, String password);
+ /*   @Query("SELECT * FROM " + UserDatabase.USER_TABLE)
+    List<User> getAllUsers();*/
+
+    @Query("Select * from  User")
     List<User> getAllRecords();
 }

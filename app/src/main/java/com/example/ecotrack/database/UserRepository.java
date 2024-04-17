@@ -41,7 +41,7 @@ public class UserRepository {
 
     public void insertUser(User user) {
         UserDatabase.databaseWriteExecutor.execute(() -> {
-            userDAO.insert(user);
+            userDAO.insertUser(user);
         });
     }
 }
